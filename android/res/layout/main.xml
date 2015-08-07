@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:weightSum="1">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/welcome.message"
+            android:id="@+id/textView" android:layout_weight="0.06" android:background="#ffc83250"
+            android:backgroundTintMode="src_over" android:textColor="@android:color/black"
+            android:textStyle="bold" android:theme="@android:style/Theme.Holo.Panel"/>
+    <WebView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/webView" android:layout_gravity="center_horizontal" android:layout_weight="0.87"/>
+    <GridView
+            android:layout_width="match_parent"
+            android:layout_height="124dp"
+            android:id="@+id/gridView" android:layout_gravity="center_horizontal" android:background="#ffc85b0e"
+            android:theme="@android:style/Theme.Holo.Light.Dialog"
+            android:columnWidth="50dp"/>
+</LinearLayout>
+

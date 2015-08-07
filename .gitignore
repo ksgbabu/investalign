@@ -1,2 +1,5 @@
 .idea/
 lib
+android/bin/
+android/gen/
+server/build/

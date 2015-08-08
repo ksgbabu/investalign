@@ -1,21 +1,27 @@
 import {computedFrom} from 'aurelia-framework';
 
-export class Welcome{
-  heading = 'Welcome to the Aurelia Navigation App!';
-  firstName = 'John';
-  lastName = 'Doe';
+export class Register{
+  regMessage = 'Please register:';
+  logMessage = 'Login:'
+  firstName = '';
+  lastName = '';
+  loginName = '';
   previousValue = this.fullName;
+  styleString ='background-color:lightblue';
 
   //Getters can't be observed with Object.observe, so they must be dirty checked.
   //However, if you tell Aurelia the dependencies, it no longer needs to dirty check the property.
   //To optimize by declaring the properties that this getter is computed from, uncomment the line below.
-  //@computedFrom('firstName', 'lastName')
+  @computedFrom('firstName', 'lastName')
   get fullName(){
     return `${this.firstName} ${this.lastName}`;
   }
-
   submit(){
     this.previousValue = this.fullName;
+    if (this.loginName === ''){
+      alert('login Name required');
+      return;
+    }
     alert(`Welcome, ${this.fullName}!`);
   }
 
@@ -23,6 +29,7 @@ export class Welcome{
     if (this.fullName !== this.previousValue) {
       return confirm('Are you sure you want to leave?');
     }
+
   }
 }
 

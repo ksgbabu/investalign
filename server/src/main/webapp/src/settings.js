@@ -4,22 +4,22 @@ import 'fetch';
 
 @inject(HttpClient)
 export class Users{
-  heading = 'Github Users';
-  users = [];
+  heading = 'Settings';
+  settings = [];
 
   constructor(http){
     http.configure(config => {
       config
         .useStandardConfiguration()
-        .withBaseUrl('https://api.github.com/');
+        .withBaseUrl('https://192.168.1.35/server');
     });
 
     this.http = http;
   }
 
   activate(){
-    return this.http.fetch('users')
+    return this.http.fetch('settings')
       .then(response => response.json())
-      .then(users => this.users = users);
+      .then(settings => this.settings = settings);
   }
 }

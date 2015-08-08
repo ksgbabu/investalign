@@ -16,10 +16,12 @@
     <WebView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/webView" android:layout_gravity="center_horizontal" android:layout_weight="0.87"/>
+            android:id="@+id/webView" android:layout_gravity="center_horizontal" android:layout_weight="0.87"
+            android:background="#ffadd8e6" style="background-color:lightblue" android:backgroundTint="#ffadd8e6"
+            android:backgroundTintMode="src_over" android:clickable="true"/>
     <GridView
             android:layout_width="match_parent"
-            android:layout_height="124dp"
+            android:layout_height="58dp"
             android:id="@+id/gridView" android:layout_gravity="center_horizontal" android:background="#ffc85b0e"
             android:theme="@android:style/Theme.Holo.Light.Dialog"
             android:columnWidth="50dp"/>

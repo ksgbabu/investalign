@@ -37,7 +37,7 @@ public class HomeActivity extends Activity {
             }
         });
 
-        webView.loadUrl("http://192.168.1.35:8080/server");
+        webView.loadUrl("http://192.168.1.33:8080/server");
 
 
 
